@@ -8,7 +8,7 @@ This app is a simple React app that displays a list of few Hogwarts students. It
 ---
 
 ## 📚 Data source
-The data is fetched from [Harry Potter API](https://hp-api.onrender.com/) included students photos. Background image is from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Hogwarts_%2828731105444%29.jpg).
+The data is fetched from JSON-server hosted on Render, source data was used from [Harry Potter API](https://hp-api.onrender.com/) included students photos. Background image is from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Hogwarts_%2828731105444%29.jpg).
 
 ---
 
