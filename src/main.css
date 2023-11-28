@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 #root {
-  @apply flex flex-col items-center w-full h-screen;
+  @apply grid w-full place-items-end;
 }
 
 .content-wrapper {
@@ -17,7 +17,7 @@
   }
 
 .content-wrapper {
-  @apply bg-slate-950/80 w-full max-w-[50rem] p-8 mx-auto overflow-x-auto rounded-md shadow-md my-auto;
+  @apply bg-slate-950/80 w-full max-w-[50rem] p-8 mx-auto overflow-x-auto rounded-md shadow-md 2xl:my-auto my-8;
 }
 
 h1 {
@@ -96,7 +96,7 @@ input[type="radio"] {
 }
 
 footer {
-  @apply  w-full px-4 py-6 text-center text-slate-50 bg-slate-900/80;
+  @apply  w-full px-4 py-6 mt-auto text-center text-slate-50 bg-slate-900/80;
 }
 
 .text-loading span {
