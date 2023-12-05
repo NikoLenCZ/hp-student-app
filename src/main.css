@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 #root {
-  @apply flex flex-col items-center w-full h-screen;
+  @apply grid w-full place-items-end;
 }
 
 .content-wrapper {
@@ -17,7 +17,7 @@
   }
 
 .content-wrapper {
-  @apply bg-slate-950/80 w-full max-w-[50rem] p-8 mx-auto overflow-x-auto rounded-md shadow-md my-auto;
+  @apply bg-slate-950/80 w-full max-w-[50rem] p-8 mx-auto overflow-x-auto rounded-md shadow-md 2xl:my-auto my-8;
 }
 
 h1 {
@@ -96,9 +96,43 @@ input[type="radio"] {
 }
 
 footer {
-  @apply  w-full px-4 py-6 text-center text-slate-50 bg-slate-900/80;
+  @apply  w-full px-4 py-6 mt-auto text-center text-slate-50 bg-slate-900/80;
+}
+
+.text-loading span {
+  @apply inline-block w-[6px] h-[6px] mr-1 duration-1000 ease-in-out bg-white rounded-full animate-bounce;
+}
+
+.text-loading span:nth-child(1) {
+  @apply bg-slate-100;
+}
+
+.text-loading span:nth-child(2) {
+  @apply  bg-indigo-300;
+}
+
+.text-loading span:nth-child(3) {
+  @apply  bg-indigo-500;
+}
+
+}
+
+.text-loading span:nth-child(2) {
+ animation-delay: 300ms;
+}
+
+.text-loading span:nth-child(3) {
+ animation-delay: 600ms;
 }
 
 
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-70%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
 }
-

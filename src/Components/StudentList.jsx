@@ -38,7 +38,7 @@ const StudentList = () => {
     <>
       <div className="content-wrapper">
         <h1>List of students</h1>
-        { loading ? <p className='text-loading'>Loading data...</p> : null }
+        { loading ? <p class="text-loading">Loading data&nbsp;<span></span><span></span><span></span></p> : null }
         { error ? <p className='text-error'>{ error }</p> : null }
         { students.length > 0 ? (
           <table className="student-list">
