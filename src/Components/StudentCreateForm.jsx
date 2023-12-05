@@ -40,7 +40,7 @@ const StudentCreateForm = () => {
     createStudent()
       .then((response) => response.json())
       .then((body) => {
-        navigate(`/students/${body}`);
+        navigate(`/students/${body.id}`);
       });
   };
 
@@ -71,13 +71,13 @@ const StudentCreateForm = () => {
                 <tr>
                   <th>
                     <label htmlFor="first-name" className="form-label">
-                      First name
+                      Name
                     </label>
                   </th>
                   <td>
                     <input
-                      id="first-name"
-                      name="first-name"
+                      id="name"
+                      name="name"
                       className="form-control"
                       value={ student.firstName }
                       onChange={ (event) => setName(event.target.value) }

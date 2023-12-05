@@ -11,8 +11,7 @@ const StudentList = () => {
     return fetch("https://hp-characters-api.onrender.com/characters")
       .then((response) => response.json())
       .then((data) => {
-        const filteredStudents = filterStudents(data);
-        setStudents(filteredStudents);
+        setStudents(data);
       })
       .catch((error) => setError(error.message))
       .finally(() => {
@@ -20,9 +19,6 @@ const StudentList = () => {
       });
   };
 
-  const filterStudents = (students) => {
-    return students.filter((student) => student.hogwartsStudent === true && student.house.trim().length > 0);
-  };
 
   const deleteStudent = (id) => {
     return fetch(`https://hp-characters-api.onrender.com/characters/${id}`, { method: "DELETE" });
